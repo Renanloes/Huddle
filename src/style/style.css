@@ -1,30 +1,29 @@
-body{
+main{
     display: grid;
     grid-template-areas: "header"
                          "section" 
                          "footer";
-    grid-template-columns: repeat(1, 1fr);
-    background: url(/src/images/bg-desktop.svg);
+    background-image: url(../images/bg-desktop.svg);
     background-color:  hsl(257, 40%, 49%);
+    height: 100vh;
 }
 
 
 .header{
     grid-area: header;
-    margin: 25px 60px ;
+    padding: 20px 60px ;
 }
 
 .section{
     grid-area: section;
     display: flex;
-    grid-column-gap: 4%;
 }
 
-.section img{
-    margin: 70px auto auto 60px;
+.section .ilustration{
+    margin: 35px 35px auto 60px;
 }
 
-.description{
+.section .description{
     font-family: var(--restante);
     color: white;
     display: flex;
@@ -33,20 +32,20 @@ body{
     margin-top: 8%;
 }
 
-.description h2{
+.section .description h2{
     font-weight: 600;
     font-size: 40px;
     line-height: 60px;
 }
 
-.description p{
+.section .description p{
     font-weight: 400;
     font-size: 20px;
     margin-top: 30px;
     line-height: 25px;
 }
 
-.description .btn a{
+.section .description .btn{
     display: flex;
     justify-content: center;
     color:  hsl(257, 40%, 49%);
@@ -59,7 +58,7 @@ body{
     border-radius: 100px;
 }
 
-.description .btn a:hover{
+.section .description .btn:hover{
     color: white;
     background-color: var(--fundo);
     transition: 0.2s ease-out;
@@ -69,80 +68,30 @@ body{
     grid-area: footer;
     display: flex;
     justify-content: flex-end;
-    height: 100px;
-
+    height: 80px;
 }
 
-.social{
+.footer .social{
     display: flex;
     margin-right: 90px;
 }
 
-.footer a{
-    padding: 15px;
+.footer .social .web{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     margin: 7px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
-.footer a:hover{
+.footer .social .web:hover{
     color: var(--fundo);
-}
-
-@media (max-width: 376px){
-    body{
-        background: url(/src/images/bg-mobile.svg);
-        background-repeat: no-repeat;
-        background-color:   hsl(257, 40%, 49%);
-        max-width: 375px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header{
-        margin: 30px auto auto 40px ;
-    }
-
-    .header img{
-        width: 120px;
-    }
-
-    .section{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .section img{
-        margin: 65px auto auto 45px;
-        width: 300px;
-    }
-
-    .description{
-        display: flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    .description h2{
-        font-size: 22px;
-        line-height: 35px;
-    }
-
-    .description p{
-        font-size: 15px;
-        width: 275px;
-    }
-
-    .description .btn{
-        margin-top: 20px;
-    }
-
-    .social{
-        display: flex;
-        align-items: center;
-        margin: auto;
-    }
-
-    .social a{
-        margin: 0;
-    }
+    border-color: var(--fundo);
+    transition: 0.2s ease-in-out;
 }

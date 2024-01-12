@@ -11,7 +11,10 @@ main{
 
 .header{
     grid-area: header;
-    padding: 20px 60px ;
+}
+
+.header img{
+    margin: 20px 60px ;
 }
 
 .section{
@@ -21,6 +24,7 @@ main{
 
 .section .ilustration{
     margin: 35px 35px auto 60px;
+    width: 100%;
 }
 
 .section .description{
@@ -94,4 +98,55 @@ main{
     color: var(--fundo);
     border-color: var(--fundo);
     transition: 0.2s ease-in-out;
+}
+
+@media(max-width: 425px){
+    main{
+        background-image: url(../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        width: 100vw;
+    }
+
+    .header img{
+        width: 150px;
+        margin: 15px 30px;
+    }
+
+    .section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section .ilustration{
+        padding: 15px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section .description{
+        align-items: center;
+    }
+
+    .section .description h2{
+        line-height: 40px;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .section .description p{
+        font-size: 14px;
+        margin-left: 8%;
+        text-align: center;
+    }
+
+    .footer{
+        justify-content: center;
+        align-items: end;
+    }
+
+    .footer .social{
+        margin-right: 0px;
+    }
 }
